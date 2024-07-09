@@ -1,7 +1,9 @@
 {
   "words": [
+    "heroicons",
     "Nuxt",
-    "ririo"
+    "ririo",
+    "vueuse"
   ],
   "ignorePaths": []
 }
