@@ -1,20 +1,22 @@
 {
   "name": "ws-undulating-calculator",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "dev": "bun version && nuxt dev",
+    "generate": "bun version && nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint . --cache",
-    "lint:fix": "bun lint --fix"
+    "lint:fix": "bun lint --fix",
+    "version": "bun ./utils/version"
   },
   "dependencies": {
     "@nuxt/eslint": "^0.3.13",
     "@nuxt/ui": "^2.17.0",
+    "@types/bun": "^1.1.6",
     "nuxt": "^3.12.3",
     "vue": "latest"
   }
