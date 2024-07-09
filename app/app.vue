@@ -107,10 +107,15 @@ onMounted(() => {
       <div
         v-for="user of users"
         :key="user.id"
-        class="columns-2 mt-2 h-[4rem]"
+        class="columns-2 mt-2"
       >
-        <UFormGroup label="名前">
-          <UInput v-model="user.name" />
+        <UFormGroup
+          label="名前"
+        >
+          <UInput
+            v-model="user.name"
+            class="my-1"
+          />
         </UFormGroup>
         <UFormGroup label="時間">
           <UInput
