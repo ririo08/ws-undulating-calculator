@@ -67,6 +67,19 @@ const demo = () => {
   }]
 }
 
+const toast = useToast()
+const copyToClipBoard = async () => {
+  if (copied.value) return undefined
+
+  await copy(result.value)
+  if (copied.value) {
+    toast.add({ title: 'コピーしました' })
+  }
+  else {
+    toast.add({ title: 'コピーに失敗しました', color: 'red' })
+  }
+}
+
 onMounted(() => {
   addUser()
   addUser()
@@ -121,7 +134,7 @@ onMounted(() => {
           :icon="copied ? 'i-heroicons-check' : 'i-heroicons-clipboard'"
           color="blue"
           :disabled="!isSupported"
-          @click="copy(result)"
+          @click="copyToClipBoard"
         >
           コピー
         </UButton>
@@ -133,4 +146,6 @@ onMounted(() => {
       </UCard>
     </section>
   </div>
+
+  <UNotifications />
 </template>
