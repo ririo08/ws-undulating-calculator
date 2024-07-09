@@ -4,7 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
   modules: ["@nuxt/ui", "@nuxt/eslint"],
-
+  app: {
+    baseURL: '/ws-undulating-calculator/'
+  },
   future: {
     compatibilityVersion: 4,
   },
