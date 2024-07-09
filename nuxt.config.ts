@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxt/eslint', '@vueuse/nuxt'],
 
   app: {
-    baseURL: '/ws-undulating-calculator/',
+    baseURL: '/ws-wave-calculator/',
     head: {
       title: 'ホワイトアウトサバイバル 波状計算機',
     },
